@@ -4,4 +4,6 @@
     <string name="author">Author</string>
     <string name="status">Status</string>
     <string name="commentStatus">CommentStatus</string>
+    <string name="detail">Detail</string>
+    <string name="no_data_available">NoDataAvailable</string>
 </resources>

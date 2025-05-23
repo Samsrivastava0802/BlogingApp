@@ -4,6 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.samridhi.blogingapp.presentation.browserscreen.BrowserScreen
+import com.samridhi.blogingapp.presentation.home.HomeScreen
 
 @Composable
 fun AppNavGraph(
@@ -18,13 +20,16 @@ fun AppNavGraph(
         composable(
             route = AppScreen.HomeScreen.route
         ) {
-
+           HomeScreen(onAction = navActions::navigateFromHomeScreen)
         }
         composable(
-            route = AppScreen.BlogDetailScreen.route
+            route = AppScreen.BrowserScreen.route
         ) {
-
+            val data = it.arguments?.getString(AppArgs.ARG_URL)
+            BrowserScreen(
+                 onAction = navActions::navigateFromBrowserScreen,
+                 url = data ?: ""
+             )
         }
     }
-
 }

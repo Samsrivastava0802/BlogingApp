@@ -15,6 +15,8 @@ workRuntimeVersion = "2.7.1"
 hiltVersion = "2.48"
 navVersion = "2.7.7"
 accompanistVersion = "0.32.0"
+shimmerVerCompose = "1.0.3"
+
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,6 +43,8 @@ dagger-hilt-android = { group = "com.google.dagger", name = "hilt-android", vers
 dagger-hilt-android-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hiltVersion" }
 androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navVersion" }
 accompanist-navigation-material = { group = "com.google.accompanist", name = "accompanist-navigation-material", version.ref = "accompanistVersion" }
+shimmer = { module = "com.valentinilk.shimmer:compose-shimmer", version.ref = "shimmerVerCompose" }
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
